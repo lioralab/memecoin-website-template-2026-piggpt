@@ -1,250 +1,150 @@
-<div align="center">
-
 # Memecoin Website Design 2026 — PIGGPT
 
-### A dark, motion-led landing page concept for Solana memecoins.
+A **Solana memecoin website template and character-design showcase** built with HTML, CSS, and vanilla JavaScript. The project explores a character-led crypto landing page with a custom pig mascot, bold art direction, motion-led interactions, and sections commonly used on a memecoin website.
 
-[![Live preview](https://img.shields.io/badge/%E2%9C%93_live_preview-memecoin--website--design--2026--piggpt.netlify.app-FF3E9A?style=for-the-badge)](https://memecoin-website-design-2026-piggpt.netlify.app/)
-[![Accessibility](https://img.shields.io/badge/a11y-WCAG%202.2%20AA-4F7A00?style=flat-square)](#accessibility)
-[![Responsive](https://img.shields.io/badge/responsive-320%E2%86%921920px-35E8FF?style=flat-square)](#responsive-behaviour)
-[![Dependencies](https://img.shields.io/badge/dependencies-none-B6FF3B?style=flat-square)](#built-with)
-[![No build step](https://img.shields.io/badge/build-none%20required-D946EF?style=flat-square)](#built-with)
+**[View the live demo](https://memecoin-website-design-2026-piggpt.netlify.app/)**
 
-[**→ Open the live design**](https://memecoin-website-design-2026-piggpt.netlify.app/)
+> **Important demo notice:** PIGGPT is presented in this repository as a website-design concept, not as verification of a real token. The hosted preview includes copy and figures that resemble live token claims, including tokenomics, airdrop allocations, roadmap statuses, and security statements. Treat those details as illustrative unless you independently verify them from reliable sources. The demo is not proof that a token, allocation, contract status, or project milestone is real. Replace all sample content with accurate information before adapting this design for a real project.
 
-</div>
+## Project overview
 
----
+This project demonstrates how a memecoin brand can be built around a recognizable character instead of relying only on a ticker symbol and a generic trading interface. The pig mascot anchors the visual identity, while the dark interface, bright accents, and restrained motion help organize the page and its content.
 
-![Hero](preview-01-hero.jpg)
+The site is intended as a **front-end design sample and portfolio piece** for people exploring memecoin website design, Solana crypto landing pages, mascot development, and character-driven digital branding.
 
-> **A design concept, not a live token.** This is a showcase page for a fictional token called PIGGPT, built to demonstrate an art direction: near-black canvas, acid accents, a mascot as the hero, and motion that carries meaning. The contract address field ships deliberately empty. Nothing on this page is an offer, a promotion, or financial advice.
+## Features
 
----
+- **Character-led visual identity:** a custom PIGGPT pig mascot and a consistent visual direction.
+- **Dark crypto-inspired interface:** near-black surfaces, high-contrast display type, and pink, violet, acid-green, and cyan accents.
+- **Responsive landing-page layout:** content adapts across desktop, tablet, and mobile-sized screens.
+- **Story section:** narrative chapters give the fictional project a recognizable character and tone.
+- **Tokenomics layout:** allocation rows, data tiles, and a donut-chart presentation for demonstrating how token information can be displayed.
+- **Airdrop section:** eligibility and distribution components shown as template content.
+- **How-to-buy section:** a four-step content pattern for a project-specific onboarding flow.
+- **Roadmap timeline:** phase cards and status labels for presenting milestones.
+- **Community and FAQ sections:** reusable patterns for social links, common questions, and risk communication.
+- **Motion and micro-interactions:** scroll reveals, animated data visuals, hover effects, and button feedback.
+- **Reduced-motion consideration:** motion effects are designed to account for users who prefer reduced animation; test this behavior against the source code before production use.
+- **Inline SVG visuals:** scalable icon and illustration elements that can be styled with CSS.
+- **Static-site approach:** the design is built with HTML, CSS, and vanilla JavaScript, without a front-end framework or a separate build step.
 
-## Contents
+## Live preview
 
-- [The concept](#the-concept)
-- [Design system](#design-system)
-- [Page anatomy](#page-anatomy)
-- [Motion language](#motion-language)
-- [Craft details](#craft-details)
-- [Responsive behaviour](#responsive-behaviour)
-- [Accessibility](#accessibility)
-- [Built with](#built-with)
-- [The service](#the-service)
-- [Process](#process)
-- [Packages](#packages)
-- [Enquiries](#enquiries)
-- [Rights](#rights)
+**[Open the PIGGPT website demo](https://memecoin-website-design-2026-piggpt.netlify.app/)**
 
----
+The live site is a visual preview of the concept. Before using it as the basis for a real token website, review every link, interactive control, figure, and project statement. Do not assume that a visible button, token statistic, security statement, or roadmap label has been independently verified.
 
-## The concept
+## Page sections
 
-Most memecoin sites are a white page, a wallet button, and a chart. That reads as disposable, and it gives the project no face.
-
-This concept treats the token as a **character**. The mascot is not decoration in the corner — it occupies the centre of the first screen at roughly the same visual weight as the wordmark. Everything else in the art direction supports that one decision: the canvas is almost black so the character carries the colour, the accent palette is deliberately acid (`#B6FF3B`, `#35E8FF`) against magenta, and the type is wide and confident rather than crypto-loud.
-
-The tone underneath is *competent*, not *hype*. The roadmap section literally reads *"No vague promises about global adoption."* The risk disclosure sits in the footer, not hidden. When the contract address is missing the interface says so plainly instead of rendering a placeholder that looks real.
-
-That restraint is the part worth copying. A design that reads as trustworthy gets further than one that shouts.
+| Section | Purpose |
+|---|---|
+| Hero | Introduces the brand, mascot, and primary calls to action. |
+| Origin | Builds the fictional character story and brand personality. |
+| Tokenomics | Demonstrates how allocations and token details can be presented. |
+| Airdrop | Shows a layout for communicating eligibility and distribution. |
+| How to Buy | Provides a step-based onboarding layout. |
+| Roadmap | Organizes milestones into a timeline. |
+| Community | Provides space for official social channels and community information. |
+| FAQ and disclosure | Addresses common questions and makes risk language visible. |
 
 ## Design system
 
-**Palette**
+### Color palette
 
-| Role | Token | Hex | Where it earns its place |
-|---|---|---|---|
-| Canvas | `--bg` | `#07060C` | Near-black with a violet cast, so the magenta feels warm against it |
-| Surface | `--surface` | `#100D1B` | Cards, one step up from the canvas |
-| Primary text | `--text` | `#F4F0FF` | Soft white — pure white glares on a dark field |
-| Secondary | `--muted` | `#9E95BA` | Body copy at 5.77:1 on canvas |
-| Tertiary | `--muted-2` | `#948CB0` | Labels at 10–12px, tuned to 5.33:1 |
-| Signature | `--pink` | `#FF3E9A` | The mascot, the primary button, the wordmark |
-| Signature light | `--pink-2` | `#FF7AC0` | Pig snout, soft fills |
-| Gradient mid | `--magenta` | `#D946EF` | Pink → magenta → violet gradient |
-| Gradient end | `--violet` | `#8B5CF6` | Gradient terminus |
-| Signal | `--acid` | `#B6FF3B` | Live indicators, kickers, "COMPLETE" badges |
-| Signal alt | `--cyan` | `#35E8FF` | Secondary signal, the particle field |
-| Warning | `--amber` | `#FFB020` | Risk disclosure accents |
-
-Two gradients do most of the work — `pink → magenta → violet` for display type, and `acid → cyan` for anything live or active. Restraint there is what keeps it from looking like a casino.
-
-**Typography**
-
-| Role | Face | Use |
+| Role | Hex value | Intended use |
 |---|---|---|
-| Display | Space Grotesk | Headlines, the wordmark |
-| Body | Inter | Paragraphs, UI |
-| Data | JetBrains Mono | Contract address, token figures, phase tags |
+| Background | `#07060C` | Near-black page canvas |
+| Surface | `#100D1B` | Cards and raised surfaces |
+| Primary text | `#F4F0FF` | Headings and key copy |
+| Secondary text | `#9E95BA` | Supporting copy |
+| Pink | `#FF3E9A` | Brand emphasis and key actions |
+| Light pink | `#FF7AC0` | Secondary pink accents |
+| Magenta | `#D946EF` | Gradient and display accents |
+| Violet | `#8B5CF6` | Gradient accents |
+| Acid green | `#B6FF3B` | Status and highlight accents |
+| Cyan | `#35E8FF` | Secondary highlights |
+| Amber | `#FFB020` | Warning and risk accents |
 
-Three families is generous for a landing page. Space Grotesk carries the personality, Inter stays invisible, and JetBrains Mono signals "this is a number, read it exactly" for contract addresses and supply figures.
+### Typography
 
-**Grid** — 1240px maximum, `clamp(20px, 5vw, 48px)` gutters, 18 / 28 / 40px radii.
+- **Space Grotesk:** display headings and wordmark.
+- **Inter:** body copy and interface text.
+- **JetBrains Mono:** numeric values, labels, and contract-address styling.
 
-## Page anatomy
+### Layout and motion
 
-Eight sections, each doing one job.
+The design uses a centered content area, generous spacing, rounded cards, a prominent mascot illustration, and a limited set of gradients. Motion is intended to clarify interaction and hierarchy rather than compete with the content. Review animation timing, touch behavior, and performance on the devices and browsers you intend to support.
 
-| # | Section | Design intent |
-|---|---|---|
-| — | **Hero** | Two-column split. Wordmark and contract address left, mascot in an orbital ring system right. Two counter-rotating rings carry floating data chips. |
-| 01 | **Origin** | Four narrative chapters on a numbered spine. Large outlined numerals, generous leading — this is the section that gives the project a story instead of a ticker. |
-| 02 | **Tokenomics** | Animated SVG donut chart that draws itself on scroll, five allocation rows with proportional bars, six spec tiles beneath. The percentages are readable as text, not only as colour. |
-| 03 | **Airdrop** | A single strong card. Oversized allocation figure, eligibility checklist, three wave bars for distribution tiers, and a warning strip. |
-| 04 | **How to Buy** | Four numbered step cards with inline SVG icons, 3D tilt on hover. Deliberately short — the job is reducing friction, not explaining everything. |
-| 05 | **Roadmap** | A vertical timeline with a gradient rail that fills as you scroll. Nodes sit on the axis; state badges read `COMPLETE` / `IN PROGRESS`. Cards cap at 860px so text never strays. |
-| 06 | **Community** | Four social cards plus a live-status strip. |
-| 07 | **FAQ** | Six `<details>` disclosures, one open at a time. Answers the "is this a scam" question directly rather than hiding it. |
-| — | **Footer** | Brand, nav, and a full risk disclosure. |
+## Technology
 
-![Tokenomics](preview-02-tokenomics.jpg)
+- HTML
+- CSS
+- Vanilla JavaScript
+- Inline SVG for selected graphics and icons
+- Static-site deployment, such as Netlify, Vercel, Cloudflare Pages, or GitHub Pages
 
-![Roadmap](preview-03-roadmap.jpg)
+The demo is designed to avoid a framework-specific runtime and a separate build pipeline. Check the repository files for the exact source structure and any external assets or services used by your copy.
 
-## Motion language
+## Run or customize the template
 
-Motion is used to explain state, never to fill time. Five ideas carry the whole page:
+1. Download or clone this repository.
+2. Open the main HTML entry file in a browser to inspect the page locally.
+3. Edit the HTML, CSS, and JavaScript to adjust the content, visual system, responsive behavior, and interactions.
+4. Test navigation, buttons, clipboard behavior, links, and layout at your target viewport sizes.
+5. Deploy the static files to your preferred static host.
 
-**Boot sequence** — a preloader with a progress log resolves before the hero paints. It sets the expectation that this is a designed artefact rather than a template.
+No package installation should be necessary if your copy contains only the static HTML, CSS, JavaScript, and inline assets described above. If the repository contains additional files or external dependencies, follow the instructions included with those files.
 
-**Orbital rings** — two rings counter-rotate around the mascot at 26s and 38s, each carrying a data chip. The chips stay upright because they counter-rotate against their parent — an easy thing to get wrong, and visible immediately when you don't.
+## Before using this design for a real project
 
-**Scroll-linked reveal** — sections rise and fade in as they enter the viewport. The roadmap rail fills progressively with scroll position.
+Treat this repository as a starting point—not a verified, launch-ready token website. Replace and validate all project-specific content, including:
 
-**Data that draws itself** — the donut chart animates its stroke on entry; figures count up; wave bars fill left to right.
+- Token name, ticker, network, contract address, supply, and allocation percentages.
+- Airdrop rules, eligibility criteria, dates, and distribution status.
+- Claims about liquidity, burned LP tokens, revoked authorities, taxes, audits, ownership, and security.
+- Roadmap milestones, progress labels, holder counts, and other performance figures.
+- Social URLs, community links, purchase links, and wallet-related interactions.
+- Risk disclosures and any legal or regulatory wording relevant to the project and its audience.
 
-**Micro-interaction** — magnetic buttons that lean toward the cursor, 3D tilt on cards, ripple feedback on press, a custom cursor with a trailing ring.
+Never publish invented numbers, fake security assurances, fabricated partnerships, or unsupported claims as facts. Verify contract details independently and make sure each link points to the intended official destination. This README and the demo are not financial, investment, legal, or tax advice.
 
-Every one of these is gated on `prefers-reduced-motion`. On a reduced-motion device the preloader is skipped, the particle canvas never initialises, the cursor is replaced by the system one, the scramble effect is skipped, and all content renders immediately.
+## Accessibility and quality checks
 
-## Craft details
+The concept includes accessibility-oriented design considerations such as semantic page structure, a skip link, visible focus treatment, text labels alongside visual indicators, and reduced-motion handling. **This README does not claim that the current version has passed an independent WCAG 2.2 AA audit.** Before production use, test the actual source with keyboard-only navigation, screen readers, contrast checks, reduced-motion settings, and an accessibility scanner. Also test responsive behavior and all interactive elements in the browsers you support.
 
-The things that separate a considered design from a busy one:
+## What I offer
 
-- **Headlines use `text-wrap:balance`**, so a two-line heading splits evenly instead of orphaning a single word.
-- **Step cards reserve two lines for their titles**, so the body copy underneath aligns across all four cards.
-- **Colour is never the only signal.** Allocation rows carry text labels, roadmap states carry badges.
-- **The contract address is a `<code>` element** in a monospace face with a copy affordance — treated as data to be read exactly, not as prose.
-- **If the contract address is unset, the interface says so** — *"Awaiting launch — contract address not published yet"* — and the copy buttons explain why rather than silently copying nothing.
-- **The print stylesheet is designed, not inherited.** Ctrl-P produces a readable document: white ground, dark text, single-column grids, roadmap flattened to a list. Every print colour was chosen to clear 4.5:1 on paper.
-- **Works without JavaScript.** A `<noscript>` block neutralises the preloader and reveals all content.
+I design and develop character-led websites for memecoin and crypto projects, including:
 
-## Responsive behaviour
+- **Memecoin website design:** custom landing pages, page structure, and visual systems.
+- **Mascot and character design:** memorable characters that can support a project's website and brand identity.
+- **Art direction and branding:** color palettes, typography, iconography, and motion direction.
+- **Front-end development:** responsive HTML, CSS, and JavaScript implementation.
+- **Website refreshes:** visual and usability improvements to existing project websites.
+- **Static deployment:** setup and handoff for suitable static hosting platforms.
 
-Verified at 320, 375, 768, 1080, 1440 and 1920px with **zero horizontal overflow** at every width.
+The goal is a distinctive presentation with clear information—not fake urgency, invented credibility, or guaranteed investment claims.
 
-| Breakpoint | Changes |
-|---|---|
-| ≤ 1080px | Nav collapses to a drawer; hero becomes single-column with the mascot first; tokenomics specs, buy steps and socials go to 2–3 columns |
-| ≤ 640px | Stats and steps stack to one column; specs to two; the allocation rows reflow; the orbital rings are removed rather than shrunk |
-| ≤ 400px | The wordmark text collapses to the logo mark alone |
+## Project process
 
-Dropping the orbit rings below 640px instead of scaling them down is the right call — a shrunken orbital system reads as an error, while its absence reads as intentional.
+1. **Brief:** establish the project, audience, content, and goals.
+2. **Art direction:** define the visual identity, character approach, typography, colors, and page structure.
+3. **Build:** develop the responsive page and interactions.
+4. **Review:** test the experience and refine agreed design details.
+5. **Handoff:** provide the source files and practical deployment guidance.
 
-## Accessibility
+## Contact
 
-Audited against WCAG 2.2 Level AA with axe-core 4.12.1: **0 violations, 42 passes**.
+For questions about the portfolio concept, open an issue in this repository or contact me on X: [@LioraLabs](https://x.com/LioraLabs).
 
-- All body text clears 4.5:1; large text clears 3:1. Every ratio was measured against real rendered pixels, not inferred from token values.
-- Interactive targets are at least 44×44px.
-- Skip-to-content link, visible focus ring on every control.
-- The mobile drawer traps focus, marks background content `inert`, and closes on Escape.
-- Full `prefers-reduced-motion` support.
-- Semantic landmarks and a single valid `<h1>`.
+Please do not post private information, wallet credentials, or seed phrases in public issues.
 
-A design that excludes people is not a finished design. This one is built to pass on the first audit, not the third.
+## Rights and license
 
-## Built with
-
-HTML, CSS and vanilla JavaScript. **No framework, no bundler, no npm install, no runtime dependency, no build step.**
-
-That constraint is deliberate and it is part of the offer. There is no hydration cost, no client-side routing, and no dependency rot. The page is a static file you can host anywhere in under a minute.
-
-The mascot, the donut chart and every icon are inline SVG — no image requests, infinitely crisp, recolourable from the token variables.
-
----
-
-# The service
-
-**I design memecoin and crypto-project websites.** This page is the portfolio piece: a complete art direction, built and shipped rather than mocked up.
-
-## What I can do
-
-| | |
-|---|---|
-| **Landing page design** | A full single-page site like this one — hero, story, tokenomics, roadmap, FAQ, disclosure |
-| **Art direction** | Palette, type pairing, mascot and iconography, motion language — a system you can extend across pages |
-| **Character & mascot** | Custom SVG illustration built for the project, like the pig in this design |
-| **Rebrand** | New identity and design system applied to an existing site |
-| **Performance & accessibility** | Bringing an existing build up to WCAG AA, Core Web Vitals and print quality |
-| **Deployment** | Static hosting on Netlify, Vercel, Cloudflare Pages or GitHub Pages |
-
-## What I won't do
-
-Being clear about this early saves everyone time:
-
-- I don't write or promise price predictions, "next 100x" claims, or guaranteed returns. Those are financial promotion in most jurisdictions, and I won't put them on a page.
-- I don't create fake testimonials, fabricated holder counts presented as live, or invented partnerships.
-- I don't build dark patterns — fake urgency timers, confirm-overrides on cancel buttons, or anything designed to trap a wallet connection.
-
-A landing page is marketing material, and in the UK, the EU under MiFID II and comparable regimes elsewhere, marketing a security is regulated. Knowing that boundary is part of the job.
-
-## Process
-
-**1. Brief** — I ask what the project is, who it's for, and what the page must accomplish. Twenty minutes.
-
-**2. Direction** — I propose one art direction, not three options to choose between endlessly. Palette, type, mascot approach, motion language, and a wireframe of the section order.
-
-**3. Build** — Full page, built and responsive, not a static mockup. You review on the live URL.
-
-**4. Refine** — Two rounds of revision on spacing, copy, motion timing and colour balance.
-
-**5. Handoff** — You get the source, the deploy, and a short guide to the configuration. No lock-in, no ongoing fee to change a colour.
+This repository is a design showcase. The PIGGPT name, character artwork, and visual concept should not be assumed to be available for unrestricted reuse. Check the repository for a `LICENSE` file before reusing or redistributing any code or assets. If no license is provided, do not assume that the repository grants permission to reuse its contents.
 
 ---
 
-## Packages
-
-<!-- Replace the placeholders below with your real terms before publishing. -->
-
-| | Concept | Standard | Bespoke |
-|---|---|---|---|
-| Sections | Up to 4 | Up to 8 | Unlimited |
-| Custom mascot | — | Simple SVG | Fully original |
-| Art direction | Reuse | New palette + type | New palette, type, illustration system |
-| Motion | Basic | Full | Full + custom transitions |
-| Revisions | 1 | 2 | 3 |
-| Delivery | `[days]` | `[days]` | `[days]` |
-| Price | `[amount]` | `[amount]` | `[amount]` |
-
-Custom work quoted separately. Payment terms `[50% upfront / 50% on delivery]`.
-
-## Enquiries
-
-<!-- Replace with your real contact details before publishing. -->
-
-Open an issue on this repository, or reach me directly:
-
-- Email: `[your@email.com]`
-- Telegram: `[your handle]`
-- X: `[your handle]`
-
-**Please don't open a public issue with your contract address in it.** Send it privately once we've agreed to work together.
-
----
-
-## Rights
-
-This design is a **showcase concept** created to demonstrate art direction and front-end craft. It is not affiliated with, endorsed by, or connected to PIGGPT or any other token, protocol, exchange or organisation. All names and figures are fictional.
-
-The code in this repository is released under `[LICENSE — add one before publishing]`. The PIGGPT name, artwork and concept remain the property of their creator.
-
-**Nothing here is financial, investment, legal or tax advice.** Cryptocurrency assets are volatile and can lose their entire value.
-
----
-
-<div align="center">
-  <sub>Design showcase · <a href="https://memecoin-website-design-2026-piggpt.netlify.app/">Live preview</a> · <a href="AUDIT.md">Accessibility audit</a></sub>
-</div>
+**Project:** Memecoin Website Design 2026 — PIGGPT  
+**Demo:** [memecoin-website-design-2026-piggpt.netlify.app](https://memecoin-website-design-2026-piggpt.netlify.app/)  
+**Focus:** memecoin website design, Solana memecoin landing page, crypto website template, mascot and character design, HTML/CSS/JavaScript front-end development.
